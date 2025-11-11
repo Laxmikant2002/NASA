@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<header>
+		<h1>NASA Picture of the Day</h1>
+		<p>Select a date to view and save past searches.</p>
+		<p class="key-note" id="key-indicator">Using demo API key. Replace it in <code>script.js</code> to avoid rate limits.</p>
+	</header>
+
+	<main>
+		<form id="search-form">
+			<label for="search-input">Choose a date</label>
+			<input id="search-input" name="date" type="date" required />
+			<button type="submit">Search</button>
+		</form>
+
+		<section id="current-image-container" class="image-container">
+			<!-- Content populated by script.js -->
+		</section>
+
+		<aside class="history">
+			<h2>Search History</h2>
+			<button id="clear-history" class="clear-btn" title="Clear saved searches">Clear history</button>
+			<ul id="search-history">
+				<!-- Past searches shown here -->
+			</ul>
+		</aside>
+	</main>
+
+	<footer>
+		<small>Data provided by NASA's APOD API.</small>
+	</footer>
+
+	<script type="text/javascript" src="./script.js"></script>
+
+</body>
+
+</html>
